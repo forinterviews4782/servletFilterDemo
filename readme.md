@@ -1,5 +1,5 @@
 # Interview exercise.
-
+[![Build Status](https://travis-ci.com/forinterviews4782/servletFilterDemo.svg?branch=master)](https://travis-ci.com/forinterviews4782/servletFilterDemo)
 This repository is an interview exercise demonstrating using servlet filters to add a tracking header to all requests as well as keeping track of response size and time.
 ## Instructions to run
 1. Clone the repository
