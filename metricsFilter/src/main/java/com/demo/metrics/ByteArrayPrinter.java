@@ -13,15 +13,15 @@ public class ByteArrayPrinter {
 
 	private ServletOutputStream servletOutputStream = new ByteArrayServletStream(byteArrayOutputStream);
 
-	public PrintWriter getWriter() {
+	protected PrintWriter getWriter() {
 		return writer;
 	}
 
-	public ServletOutputStream getStream() {
+	protected ServletOutputStream getStream() {
 		return servletOutputStream;
 	}
 
-	byte[] toByteArray() {
+	protected byte[] toByteArray() {
 		return byteArrayOutputStream.toByteArray();
 	}
 }
