@@ -2,14 +2,15 @@
 [![Build Status](https://travis-ci.com/forinterviews4782/servletFilterDemo.svg?branch=master)](https://travis-ci.com/forinterviews4782/servletFilterDemo)
 This repository is an interview exercise demonstrating using servlet filters to add a tracking header to all requests as well as keeping track of response size and time.
 ## Instructions to run
-1. Clone the repository
-2. Change to the repository directory.
-3. Execute
+1. Insure you have Java 8 or above installed.
+2. Clone the repository
+3. Change to the repository directory.
+4. Execute
 
 ```gradlew :webapp:bootRun```
 
 To run the project. Note by default the application uses port 8080. To change this edit webapp/src/resources/application.properties.
-Once the project is running to run two requests who’s response time should average out to about 2 seconds and who’s response size should average to 10 execute the following curl commands.
+Once the project is running to run two requests whose response time should average out to about 2 seconds and whose response size should average to 10 execute the following curl commands.
 
 ```
 curl -v http://localhost:8080/demo?milliseconds=1000\&stringchars=5
@@ -24,7 +25,7 @@ You should see output similar to the following.
 ```
 {"responseAverage":10.0,"responseMax":15,"responseMin":5,"timingAverage":2095.0,"timingMax":3003,"timingMin":1187}
 ```
-Note the timingMin and timingAverage numbers will be slightly off. This is do to the filter initialization code slowing down the first request. This would not be an issue if a lot of traffic was run through the application.
+Note the timingMin and timingAverage numbers will be slightly off. This is due to the filter initialization code slowing down the first request. This would not be an issue if a lot of traffic was run through the application.
 To get metrics on a specific request execute the following command
 
 ```curl http://localhost:8080/metric/237d22c0-c546-4c61-8730-52bb62bff056```
